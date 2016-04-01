@@ -13,7 +13,7 @@
   },
   "name": "h-buttons",
   "description": "Static render function for buttons",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "directories": {
     "example": "example"
