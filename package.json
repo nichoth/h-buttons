@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "wzrd example/index.js -- -dv -t csjs-injectify"
+    "dev": "wzrd example/index.js -- -dv -t csjs-injectify",
+    "build": "browserify -t csjs-injectify example/index.js > example/bundle.js"
   },
   "dependencies": {
     "csjs": "^1.0.1",
