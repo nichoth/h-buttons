@@ -9,24 +9,23 @@ Buttons made with a hyperscript style renderer and `csjs`.
 ## example
 
 ```js
-var delButton = require('h-buttons/lib/delete')
 var h = require('bel').createElement
-var defaultStyle = require('h-buttons/lib/delete.csjs')
+var buttonStyle = require('../index.csjs')
 var csjs = require('csjs')
 
 var style = csjs`
-  .example extends ${defaultStyle['h-button-delete']} {
+  .my-button extends ${buttonStyle['h-button-delete']} {
     width: 2em;
     height: 2em;
   }
 `
 
-var b = delButton(h, {
-  className: style.example,
-  onclick: function onClick(ev) {
-    console.log('delete', ev)
-  }
-}, [])
+function renderButton() {
+  return h('button', {
+    className: style['my-button'],
+    onclick: console.log.bind(console, 'delete')
+  }, [])
+}
 
-document.body.appendChild(b)
+document.body.appendChild(renderButton())
 ```
