@@ -14,7 +14,7 @@
   },
   "name": "h-buttons",
   "description": "Static render function for buttons",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.csjs.js",
   "directories": {
     "example": "example"
